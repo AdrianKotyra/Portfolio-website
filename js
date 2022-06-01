@@ -178,6 +178,7 @@ function change_img_on_scroll2() {
   {
     document.getElementById("white_half1").innerHTML="<h1 id=\"head_white\">Lorem ipsum dolor</h1> <img id=\"img_white\" src=\"IMG/10.jpg\">"
     
+    
   }
 
   if (rect3.top >= 0 &&
@@ -186,7 +187,9 @@ function change_img_on_scroll2() {
     rect3.right <= (window.innerWidth || document.documentElement.clientWidth)
     )
   {
+    
     document.getElementById("white_half1").innerHTML="<h1 id=\"head_white\">Lorem ipsum dolor</h1> <img id=\"img_white\" src=\"IMG/16.jpg\">"
+    
   }
 
   if (rect4.top >= 0 &&
@@ -204,6 +207,11 @@ function change_img_on_scroll2() {
 
 
 }
+function clear_img (){
+  document.getElementById("white_half1").style.animation=""
+}
+
+
 document.addEventListener("scroll",change_img_on_scroll2)
 
 // checking if element is visible on screen
@@ -455,11 +463,109 @@ function appear_extra_nav2() {
 
 
 function hide_extra_nav2() {
-  
   extra_nav_2.style.display="none"
+  
+  
   
   
 }
 
 middle_nav3.addEventListener("mouseover",appear_extra_nav2)
 extra_nav_2.addEventListener("mouseleave", hide_extra_nav2 )
+
+
+
+
+var extra_nav2_text12=document.getElementById("extra_nav2_text12")
+var extra_nav2_text13=document.getElementById("extra_nav2_text13")
+var extra_nav2_text14=document.getElementById("extra_nav2_text14")
+var extra_nav2_text12=document.getElementById("extra_nav2_text12")
+var extra_nav2_text12=document.getElementById("extra_nav2_text12")
+var extra_nav2_text12=document.getElementById("extra_nav2_text12")
+var extra_nav2_text_to_display=document.getElementById("extra_nav2_text_to_display")
+var extra_nav2_img=document.getElementById("extra_nav2_img")
+
+function extra_nav_2_change_imgs() {
+  extra_nav2_text_to_display.style.animation="appear3 0.5s forwards"
+  extra_nav2_text_to_display.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac porttitor nibh."
+  extra_nav2_img.style.animation="appear3 0.5s forwards";
+  extra_nav2_img.src="IMG/18.jpg"
+
+
+}
+
+
+extra_nav2_text12.addEventListener("mouseout",yyy)
+extra_nav2_text12.addEventListener("mouseover",extra_nav_2_change_imgs)
+
+
+function extra_nav_2_change_imgs2() {
+  extra_nav2_text_to_display.style.animation="appear3 0.5s forwards"
+  extra_nav2_text_to_display.innerHTML="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+  extra_nav2_img.style.animation="appear3 0.5s forwards";
+  extra_nav2_img.src="IMG/19.jpg"
+
+
+}
+extra_nav2_text13.addEventListener("mouseout",yyy)
+extra_nav2_text13.addEventListener("mouseover",extra_nav_2_change_imgs2)
+
+
+
+function extra_nav_2_change_imgs3() {
+  extra_nav2_text_to_display.style.animation="appear3 0.5s forwards"
+  extra_nav2_text_to_display.innerHTML="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet."
+  extra_nav2_img.style.animation="appear3 0.5s forwards";
+  extra_nav2_img.src="IMG/20.jpg"
+
+
+}
+extra_nav2_text14.addEventListener("mouseout",yyy)
+extra_nav2_text14.addEventListener("mouseover",extra_nav_2_change_imgs3)
+
+
+
+
+
+
+
+
+function yyy(){
+  extra_nav2_img.style.animation=""
+  extra_nav2_text_to_display.style.animation=""
+}
+function extra_nav_2_change_imgs4() {
+
+  extra_nav2_text_to_display.style.animation="appear3 0.5s forwards"
+  extra_nav2_text_to_display.style.display="table";
+  extra_nav2_text_to_display.innerHTML="Neque porro quisquam est ipsum quia dolor sit amet.";
+  extra_nav2_img.style.animation="appear3 0.5s forwards";
+  extra_nav2_img.src="IMG/21.jpg"
+  
+
+
+}
+extra_nav2_text15.addEventListener("mouseout",yyy)
+extra_nav2_text15.addEventListener("mouseover",extra_nav_2_change_imgs4)
+
+
+
+
+
+// --------------------------------------------------------------
+
+function extra_nav_2_change_imgs5() {
+  extra_nav2_text_to_display.style.animation="appear3 0.5s forwards"
+  extra_nav2_text_to_display.innerHTML="Neque porro quisquam est qui"
+  extra_nav2_img.style.animation="appear3 0.5s forwards";
+  extra_nav2_img.src="IMG/22.jpg"
+
+
+}
+
+
+extra_nav2_text16.addEventListener("mouseout",yyy)
+extra_nav2_text16.addEventListener("mouseover",extra_nav_2_change_imgs4)
+
+
+
