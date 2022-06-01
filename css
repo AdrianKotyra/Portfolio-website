@@ -2,18 +2,20 @@
 
 
 body {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(-45deg, #ee7752, #ca94a9, #aaccd8, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
-}
-  
-  
-  
-body {background-color: rgb(112, 199, 199);
     margin:0
+
 }
+  
+  
+  
+
+    
+
 #middle_wrapper {
     background-color: white;
     width: 100%;
@@ -104,7 +106,7 @@ visibility: hidden;
     width: 100%;
     z-index: 3;
     display: none;
-    transition: 2s;
+   
     height: 20vw;
     
     
@@ -132,7 +134,8 @@ visibility: hidden;
     font-size: 1.5vw;
     background-color: black;
     color: white;
-    animation: appear_extra_nav 0.3s forwards
+    animation: appear_extra_nav 0.3s forwards;
+    
     
 }
 #text1_4_col, #extra_nav2_text1{
@@ -152,11 +155,16 @@ visibility: hidden;
 }
 #text_extra_nav2 *{
     margin-bottom:1vw;
+    display: table;
+    
 
     
 }
 #extra_nav_2 {
     display: none;
+    
+    
+    
     
 }
 
@@ -168,17 +176,20 @@ visibility: hidden;
     padding: 10% 20% 0 20%;
     background-color: black;
     color: white;
-    height: 30vw;
     position: fixed;
     width: 100%;
     z-index: 2;
-    animation: appear_extra_nav 0.5s forwards, appear2 0.2s forwards
+    animation: appear_extra_nav 0.5s forwards, appear2 0.2s forwards;
+    transition: 1s;
+    
     
     
     
     
     
 }
+
+
 #nav_3_middle *{
     margin-right: 1vw;
 }
@@ -196,10 +207,10 @@ visibility: hidden;
     padding-right: 40%;
 }
 #extra_nav2_img {
-    
     width: 35vw;
     height: 20vw;
 }
+
 #img1_text {
     font-size: 1.5vw;
     text-decoration: underline;
@@ -594,6 +605,7 @@ margin-top: 4vw;
 }
 #white_half1 {
     text-align: center;
+    transition: 2s;
 
     
     
@@ -638,6 +650,7 @@ margin-top: 4vw;
 #img_white {
     width: 30vw;
     height: 30vw;
+    
     
     
 
@@ -829,6 +842,7 @@ margin-top: 4vw;
     
     
     
+    
 }
 
 
@@ -892,7 +906,7 @@ margin-top: 4vw;
     position: absolute;
     width: 17vw;
     height: 15vw;
-    transform: translate(450%, -140%);
+    transform: translate(450%, -160%);
 
     
 }
@@ -1002,6 +1016,11 @@ margin-top: 4vw;
 
     
 }
+.vanish {
+    visibility: hidden;
+    
+    transition: 1s;
+}
 
 #window_settings {
     background-color: white;
@@ -1072,17 +1091,13 @@ margin-top: 4vw;
     background-position: 0% 50%;
 }
 }
-@keyframes fadeoutEffect{
-    0%{background-color: rgba(0, 0, 0, 1)};
-    20%{background-color: rgba(0, 0, 0, 0.8)};
-    40%{background-color: rgba(0, 0, 0, 0.6)};
-    60%{background-color: rgba(0, 0, 0, 0.4)};
-    80%{background-color: rgba(0, 0, 0, 0.2)};
-    100%{background-color: rgba(0, 0, 0, 0);}
+/* @keyframes fade_out {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+
+} */
 
 
-
-}
 @keyframes show_up_effect{
     0% {opacity:0;}
     100% {opacity:1;}
@@ -1092,6 +1107,16 @@ margin-top: 4vw;
 @keyframes appear{
     0% {opacity:0; transform: translateY(1vw);}
     100% {opacity:1; transform: translateY(0vw);}
+   
+
+        
+}
+
+@keyframes appear3{
+    0% {opacity:1; }
+    50% {opacity:0; }
+    100% {opacity:1; }
+   
 
         
 }
@@ -1104,15 +1129,22 @@ margin-top: 4vw;
 
 
 
+
 @keyframes appear_extra_nav{
     0% {height: 0;}
     100%{height: 25vw}
 }
 
 @keyframes hide_extra_nav{
-    0% {height: 25vw;}
-    100%{height: 0vw}
+    0% {height: 25v;}
+    100%{height: 0vw;}
 }
+
+
+.class_appear{
+    animation: appear 1s forwards;
+}
+
 .hide_extra_nav {
     animation: hide_extra_nav 2s forwards;
 }      
@@ -1163,3 +1195,49 @@ margin-top: 4vw;
 .animation_class{
     position: relative;
 }
+
+
+
+
+
+
+.animation_class2 {
+    
+   
+    cursor: pointer;
+}
+.animation_class2:before {
+    content: "";
+  position: absolute;
+  width: 0;
+  height: 0.3vw;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+    
+}
+
+
+
+.animation_class2:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
+
+
+.animation_class2{
+    position: relative;
+}
+
+
+ #extra_nav2_text_to_display {
+    font-size: 1vw;
+    
+    text-align: left;
+    width: 80%;
+    margin-top: 2vw;
+
+}
+
