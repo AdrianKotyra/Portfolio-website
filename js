@@ -43,14 +43,19 @@ nav = document.getElementById("navigation")
 window.addEventListener('scroll', () =>{
 const scrolled = window.scrollY;
 if (window.scrollY>>0) {
+  
   nav.style.backgroundColor="black", nav.style.animation="fadeEffect 0.7s forwards";
 }
-else if ((scrolled==0)) {
-  nav.style.backgroundColor="", nav.style.animation="fadeoutEffect 0.7s forwards"; 
+else if ((scrolled==0)) { 
+  
+  
+  nav.style.backgroundColor="", nav.style.animation="fade_out_background 0.7s forwards"; 
 }
 
 
 })
+
+
 
 
 
@@ -117,6 +122,7 @@ button4_gray_slider.addEventListener("click", () =>{
 
 // magic scroll split screen parallex
 function splitscroll() { 
+  
   const controller = new ScrollMagic.Controller();
   new ScrollMagic.Scene({
     duration: '290%',
@@ -176,10 +182,12 @@ function change_img_on_scroll2() {
     )
 
   {
+    
     document.getElementById("white_half1").innerHTML="<h1 id=\"head_white\">Lorem ipsum dolor</h1> <img id=\"img_white\" src=\"IMG/10.jpg\">"
     
     
   }
+ 
 
   if (rect3.top >= 0 &&
     rect3.left >= 0 &&
@@ -188,21 +196,24 @@ function change_img_on_scroll2() {
     )
   {
     
+    
+
     document.getElementById("white_half1").innerHTML="<h1 id=\"head_white\">Lorem ipsum dolor</h1> <img id=\"img_white\" src=\"IMG/16.jpg\">"
     
   }
-
+ 
   if (rect4.top >= 0 &&
     rect4.left >= 0 &&
     rect4.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     rect4.right <= (window.innerWidth || document.documentElement.clientWidth)
     )
   {
+    
     document.getElementById("white_half1").innerHTML="<h1 id=\"head_white\">Lorem ipsum dolor</h1> <img id=\"img_white\" src=\"IMG/14.jpg\">"
     
   }
 
-
+  
 
 
 
@@ -236,7 +247,7 @@ function appear_elements_animation() {
 
   
   else {
-    middle_content.style.display="none"
+    // middle_content.style.display="none"
   }
   
   
@@ -252,27 +263,27 @@ var text_gray_all = document.getElementById("text_gray_all")
 var text_gray1 = document.getElementById("text_gray1")
 
 var top_content = document.getElementById("top_content")
-var checkpoint2 = document.getElementById("checkpoint2")
+var checkpoint222 = document.getElementById("checkpoint2")
 
 function appear_elements_animation2() {
 
   
-  var rect = checkpoint2.getBoundingClientRect();
+  var rect111 = checkpoint222.getBoundingClientRect();
   
   if (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect111.top >= 0 &&
+    rect111.left >= 0 &&
+    rect111.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect111.right <= (window.innerWidth || document.documentElement.clientWidth)
   ) 
   {
-    text_gray_all.style.display="block"
+    text_gray_all.style.display="table"
   }
   else {
     
     
     
-    text_gray_all.style.display="none"
+    // text_gray_all.style.display="none"
   }
 }
  
@@ -306,7 +317,7 @@ function appear_elements_animation3() {
     
     
     
-    text_semi_black_both.style.display="none"
+    // text_semi_black_both.style.display="none"
   }
 }
   
@@ -335,7 +346,7 @@ function appear_elements_animation4() {
   else {
     
     
-    bottom_text.style.display="none"
+    // bottom_text.style.display="none"
   }
 }
 
@@ -361,6 +372,76 @@ function appear_slider(){
   }
   
 }
+
+
+
+
+
+
+function appear_elements_animation33() {
+  var text_black_bottom_checkpoint = document.getElementById("text_black_bottom_checkpoint")
+  var text_black_bottom = document.getElementById("text_black_bottom")
+  var rect = text_black_bottom_checkpoint.getBoundingClientRect()
+  
+  
+
+  if (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  ) 
+  {
+    text_black_bottom.style.display="table"
+  }
+  else {
+    
+    
+    
+    // text_black_bottom.style.display="none"
+  }
+}
+  
+
+document.addEventListener("scroll", appear_elements_animation33)
+
+
+
+
+var wrapper_full_screen = document.getElementById("wrapper_full_screen")
+var coli_text_and_img = document.getElementById("coli_text_and_img")
+var coli_text_and_img2 = document.getElementById("coli_text_and_img2")
+function display_full_screen(){
+  
+  
+  
+
+}
+
+coli_text_and_img.addEventListener("click", display_full_screen )
+coli_text_and_img2.addEventListener("click", display_full_screen )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -418,6 +499,7 @@ middle_nav3.addEventListener("mouseout", arrow_animation_nav4)
 var extra_navigation_display_onhover = document.getElementById("extra_navigation_display_onhover")
 var container_4_col = document.getElementById("container_4_col")
 function appear_extra_nav() {
+  extra_navigation_display_onhover.style.animation="appear_extra_nav 0.5s forwards"
   extra_navigation_display_onhover.style.display="block"
   extra_nav_2.style.display="none"
 
@@ -429,49 +511,61 @@ function appear_extra_nav() {
 
 
 function hide_extra_nav() {
-  
-  extra_navigation_display_onhover.style.display="none"
-  
-  
- 
 
+  setTimeout(function(){
+  extra_navigation_display_onhover.style.display="none"
+  }, 500)
+  
+  
 
 }
 
 
+function hide_extra_nav_animation() {
+  
+  extra_navigation_display_onhover.style.animation="fade_out_nav 0.5s forwards"
+    
+}
 
 var navigation = document.getElementById("navigation")
 
 
 middle_nav1.addEventListener("mouseover",appear_extra_nav )
 container_4_col.addEventListener("mouseleave", hide_extra_nav )
-
+container_4_col.addEventListener("mouseleave",hide_extra_nav_animation )
 
 
 // middle_nav3.addEventListener("mouseover",appear_extra_nav2 )
 
-
+var extra_nav2_container=document.getElementById("extra_nav2_container")
 
 var extra_nav_2= document.getElementById("extra_nav_2")
 
 function appear_extra_nav2() {
+  
+  extra_nav2_container.style.animation="appear_extra_nav 0.5s forwards, appear2 0.2s forwards"
   extra_nav_2.style.display="block"
   extra_navigation_display_onhover.style.display="none"
 
 
 }
 
+function hide_extra_nav2_animation() {
+  extra_nav2_container.style.animation="fade_out_nav 0.5s forwards"
+}
+
 
 function hide_extra_nav2() {
-  extra_nav_2.style.display="none"
-  
-  
+
+  setTimeout(function(){
+  extra_nav_2.style.display="none"} ,500)
   
   
 }
 
 middle_nav3.addEventListener("mouseover",appear_extra_nav2)
-extra_nav_2.addEventListener("mouseleave", hide_extra_nav2 )
+extra_nav2_container.addEventListener("mouseleave", hide_extra_nav2)
+extra_nav2_container.addEventListener("mouseleave", hide_extra_nav2_animation)
 
 
 
@@ -484,8 +578,10 @@ var extra_nav2_text12=document.getElementById("extra_nav2_text12")
 var extra_nav2_text12=document.getElementById("extra_nav2_text12")
 var extra_nav2_text_to_display=document.getElementById("extra_nav2_text_to_display")
 var extra_nav2_img=document.getElementById("extra_nav2_img")
-
+var slider_arrow_extra_nav1 = document.getElementById("slider_arrow_extra_nav1")
 function extra_nav_2_change_imgs() {
+
+  slider_arrow_extra_nav1.style.display="inline-block"
   extra_nav2_text_to_display.style.animation="appear3 0.5s forwards"
   extra_nav2_text_to_display.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac porttitor nibh."
   extra_nav2_img.style.animation="appear3 0.5s forwards";
@@ -500,6 +596,7 @@ extra_nav2_text12.addEventListener("mouseover",extra_nav_2_change_imgs)
 
 
 function extra_nav_2_change_imgs2() {
+  slider_arrow_extra_nav2.style.display="inline-block"
   extra_nav2_text_to_display.style.animation="appear3 0.5s forwards"
   extra_nav2_text_to_display.innerHTML="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
   extra_nav2_img.style.animation="appear3 0.5s forwards";
@@ -513,6 +610,7 @@ extra_nav2_text13.addEventListener("mouseover",extra_nav_2_change_imgs2)
 
 
 function extra_nav_2_change_imgs3() {
+  slider_arrow_extra_nav3.style.display="inline-block"
   extra_nav2_text_to_display.style.animation="appear3 0.5s forwards"
   extra_nav2_text_to_display.innerHTML="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet."
   extra_nav2_img.style.animation="appear3 0.5s forwards";
@@ -533,9 +631,14 @@ extra_nav2_text14.addEventListener("mouseover",extra_nav_2_change_imgs3)
 function yyy(){
   extra_nav2_img.style.animation=""
   extra_nav2_text_to_display.style.animation=""
+  slider_arrow_extra_nav1.style.display="none"
+  slider_arrow_extra_nav2.style.display="none"
+  slider_arrow_extra_nav3.style.display="none"
+  slider_arrow_extra_nav4.style.display="none"
+  slider_arrow_extra_nav5.style.display="none"
 }
 function extra_nav_2_change_imgs4() {
-
+  slider_arrow_extra_nav4.style.display="inline-block"
   extra_nav2_text_to_display.style.animation="appear3 0.5s forwards"
   extra_nav2_text_to_display.style.display="table";
   extra_nav2_text_to_display.innerHTML="Neque porro quisquam est ipsum quia dolor sit amet.";
@@ -555,6 +658,8 @@ extra_nav2_text15.addEventListener("mouseover",extra_nav_2_change_imgs4)
 // --------------------------------------------------------------
 
 function extra_nav_2_change_imgs5() {
+
+  slider_arrow_extra_nav5.style.display="inline-block"
   extra_nav2_text_to_display.style.animation="appear3 0.5s forwards"
   extra_nav2_text_to_display.innerHTML="Neque porro quisquam est qui"
   extra_nav2_img.style.animation="appear3 0.5s forwards";
@@ -565,7 +670,115 @@ function extra_nav_2_change_imgs5() {
 
 
 extra_nav2_text16.addEventListener("mouseout",yyy)
-extra_nav2_text16.addEventListener("mouseover",extra_nav_2_change_imgs4)
+extra_nav2_text16.addEventListener("mouseover",extra_nav_2_change_imgs5)
 
 
 
+function window_appear(){
+  var window_settings = document.getElementById("window_settings")
+  var window_checkpoint = document.getElementById("window_checkpoint")
+  var rect = window_checkpoint.getBoundingClientRect()
+  
+  
+  
+
+  if (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  ) 
+  {
+    window_settings.style.display="inline-block"
+  }
+  else {
+    // window_settings.style.display="none"
+
+  }
+  
+}
+
+
+
+
+document.addEventListener("scroll", window_appear)
+
+
+function close_window_fullscreen() {
+  setTimeout(function(){
+  document.querySelector("#wrapper_full_screen").style.animation="appear4 0.5s forwards"
+  document.querySelector("#wrapper_full_screen").style.display="none"
+  document.querySelector("#x_to_close_window").style.display="none"}, 500)
+
+}
+
+document.querySelector("#x_to_close_window").addEventListener("click", close_window_fullscreen )
+document.querySelector("#x_to_close_window").addEventListener("click", fade_out_element )
+
+
+function appear_window_fullscreen() {
+  
+  document.querySelector("#wrapper_full_screen").style.display="flex"
+  document.querySelector("#x_to_close_window").style.display="flex"
+
+  
+
+
+
+
+
+}
+
+function fade_out_element () {
+  document.querySelector("#wrapper_full_screen").style.animation="fade_out 0.5s forwards"
+
+
+
+}
+
+
+
+
+document.querySelector("#coli_text_and_img").addEventListener("click", appear_window_fullscreen)
+document.querySelector("#coli_text_and_img2").addEventListener("click", appear_window_fullscreen)
+
+
+
+
+
+
+function open_mobile_open_nav() {
+  document.querySelector("#nav_mobile_open").style.display="block"
+  document.querySelector("body").style.overflowY="hidden"
+  document.querySelector("#nav_mobile").style.visibility="hidden"
+  document.querySelector("#nav_mobile_open").style.animation="nav_mobile_open_animation 0.7s forwards"
+  
+
+  
+  
+
+}
+document.querySelector("#hamburger_mobile").addEventListener("click",open_mobile_open_nav )
+
+
+function hide_open_mobile(){
+  setTimeout(() => {document.querySelector("body").style.overflowY="visible"
+  document.querySelector("#nav_mobile_open").style.display="none"
+  document.querySelector("#nav_mobile").style.visibility="visible"
+    
+  }, 600);
+  
+
+
+
+}
+
+document.querySelector("#cross_mobile_open").addEventListener("click",hide_open_mobile )
+
+
+function hide_open_mobile_animation (){
+  document.querySelector("#nav_mobile_open").style.animation="nav_mobile_open_animation_hide  0.7s forwards"
+
+}
+
+document.querySelector("#cross_mobile_open").addEventListener("click",hide_open_mobile_animation )
