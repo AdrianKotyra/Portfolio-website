@@ -55,6 +55,174 @@ else if ((scrolled==0)) {
 
 })
 
+window.addEventListener('scroll', () =>{
+  var nav_mobile = document.getElementById("nav_mobile")
+  const scrolled = window.scrollY;
+  if (window.scrollY>>0) {
+    mobile_get_started.style.animation="appear 1s forwards",
+    mobile_get_started.style.display="block", 
+    nav_mobile.style.backgroundColor="black", nav_mobile.style.animation="fadeEffect 0.7s forwards";
+  }
+  else if ((scrolled==0)) { 
+
+    
+    mobile_get_started.style.animation="fade_out 0.7s forwards", 
+    nav_mobile.style.backgroundColor="", nav_mobile.style.animation="fade_out_background 0.7s forwards"; 
+  }
+  
+  
+})
+
+
+
+function mobile_get_started_hide() {
+  const scrolled = window.scrollY;
+  if ((scrolled==0)) { 
+    setTimeout(() => {
+      mobile_get_started.style.display="none"
+
+      
+    }, 700);
+    
+    
+    
+  }
+
+
+
+}
+window.addEventListener('scroll',mobile_get_started_hide)
+  
+
+
+
+
+
+function change_inner_html_right_arrow (){
+  setTimeout(() => {
+    if (document.querySelector("#number_to_change").innerHTML==01) {
+    document.querySelector("#number_to_change").innerHTML="02"; }
+    else
+    if (document.querySelector("#number_to_change").innerHTML==02) {
+      document.querySelector("#number_to_change").innerHTML="03";
+      
+    }
+    else
+    if (document.querySelector("#number_to_change").innerHTML==03) {
+      document.querySelector("#number_to_change").innerHTML="04";
+      
+    }
+    else
+    if (document.querySelector("#number_to_change").innerHTML==04) {
+      document.querySelector("#number_to_change").innerHTML="05";
+      
+    }
+    else
+    if (document.querySelector("#number_to_change").innerHTML==05) {
+      document.querySelector("#number_to_change").innerHTML="06";
+      
+    }
+
+    else
+    if (document.querySelector("#number_to_change").innerHTML==06) {
+      document.querySelector("#number_to_change").innerHTML="07";
+      
+    }
+
+    else
+    if (document.querySelector("#number_to_change").innerHTML==07) {
+      document.querySelector("#number_to_change").innerHTML="08";
+      
+    }
+    else
+    if (document.querySelector("#number_to_change").innerHTML==08) {
+      document.querySelector("#number_to_change").innerHTML="01";
+      
+    }
+    
+    
+
+    
+    
+
+
+
+
+  }, 500);
+  
+}
+
+
+
+// -----------------------------------------------------------------------------------
+
+function change_inner_html_left_arrow (){
+  setTimeout(() => {
+    if (document.querySelector("#number_to_change").innerHTML==08) {
+    document.querySelector("#number_to_change").innerHTML="07"; }
+    else
+    if (document.querySelector("#number_to_change").innerHTML==07) {
+      document.querySelector("#number_to_change").innerHTML="06";
+      
+    }
+    else
+    if (document.querySelector("#number_to_change").innerHTML==06) {
+      document.querySelector("#number_to_change").innerHTML="05";
+      
+    }
+    else
+    if (document.querySelector("#number_to_change").innerHTML==05) {
+      document.querySelector("#number_to_change").innerHTML="04";
+      
+    }
+    else
+    if (document.querySelector("#number_to_change").innerHTML==04) {
+      document.querySelector("#number_to_change").innerHTML="03";
+      
+    }
+
+    else
+    if (document.querySelector("#number_to_change").innerHTML==03) {
+      document.querySelector("#number_to_change").innerHTML="02";
+      
+    }
+
+    else
+    if (document.querySelector("#number_to_change").innerHTML==02) {
+      document.querySelector("#number_to_change").innerHTML="01";
+      
+    }
+    else
+    if (document.querySelector("#number_to_change").innerHTML==01) {
+      document.querySelector("#number_to_change").innerHTML="08";
+      
+    }
+    
+    
+
+    
+    
+
+
+
+
+  }, 500);
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -63,24 +231,327 @@ else if ((scrolled==0)) {
 // This is scroll function
 
 function scroll_pictures_right() {
+  var img1slider = document.querySelector('#img1_text1')
+  var img2slider = document.querySelector('#img1_text2')
+  var img3slider = document.querySelector('#img1_text3')
+  var img4slider = document.querySelector('#img1_text4')
+  var img5slider = document.querySelector('#img1_text5')
+  var img6slider = document.querySelector('#img1_text6')
+  var img7slider = document.querySelector('#img1_text7')
+  var img8slider = document.querySelector('#img1_text8')
+
+
+
+
+
+  var rect1 = img1slider.getBoundingClientRect()
+  var rect = img2slider.getBoundingClientRect()
+  var rect2 = img3slider.getBoundingClientRect()
+  var rect3 = img4slider.getBoundingClientRect()
+  var rect4 = img5slider.getBoundingClientRect()
+  var rect5 = img6slider.getBoundingClientRect()
+  var rect6 = img7slider.getBoundingClientRect()
+  var rect7 = img8slider.getBoundingClientRect()
   
-  slider_container.scrollBy(700, 0)
- 
   
+  if (
+    rect1.top >= 0 &&
+    rect1.left >= 0 &&
+    rect1.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect1.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+
+    document.querySelector("#number_to_change").style.animation="number_animation_appear 1s forwards"
+    
+    document.querySelector('#img2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+  
+   
+  
+  }
+
+
+
   
 
   
+  
+
+
+ 
+
+  if (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+
+    document.querySelector("#number_to_change").style.animation="number_animation_appear 1s forwards"
+    
+    document.querySelector('#img3').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+  
+   
+  
+  }
+  if (
+    rect2.top >= 0 &&
+    rect2.left >= 0 &&
+    rect2.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect2.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation 1s forwards"
+  document.querySelector('#img4').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  
+  }
+
+  if (
+    rect3.top >= 0 &&
+    rect3.left >= 0 &&
+    rect3.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect3.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation_appear 1s forwards"
+  document.querySelector('#img5').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  
+  }
+
+  if (
+    rect4.top >= 0 &&
+    rect4.left >= 0 &&
+    rect4.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect4.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation 1s forwards"
+  document.querySelector('#img6').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  
+  }
+
+  
+  if (
+    rect5.top >= 0 &&
+    rect5.left >= 0 &&
+    rect5.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect5.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation_appear 1s forwards"
+  document.querySelector('#img7').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  
+  }
+
+  if (
+    rect6.top >= 0 &&
+    rect6.left >= 0 &&
+    rect6.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect6.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation 1s forwards"
+  document.querySelector('#img8').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+ 
+  }
+
+  if (
+    rect7.top >= 0 &&
+    rect7.left >= 0 &&
+    rect7.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect7.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation_appear 1s forwards"
+  document.querySelector('#img1').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+  }
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+var checkpoint_slider = document.getElementById("checkpoint_slider")
+  var rect = checkpoint_slider.getBoundingClientRect()
+  
+  
+  
+
+  if (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  ) 
+  {
+    slider_container.style.display="flex"
 }
+  
+  
+ 
+
+
+
+  
+
+
 
 function scroll_pictures_left() {
-  slider_container.scrollBy(-700, 0)
+  var img1slider = document.querySelector('#img1_text1')
+  var img2slider = document.querySelector('#img1_text2')
+  var img3slider = document.querySelector('#img1_text3')
+  var img4slider = document.querySelector('#img1_text4')
+  var img5slider = document.querySelector('#img1_text5')
+  var img6slider = document.querySelector('#img1_text6')
+  var img7slider = document.querySelector('#img1_text7')
+  var img8slider = document.querySelector('#img1_text8')
+  var rect  = img1slider.getBoundingClientRect()
+  var rect1 = img2slider.getBoundingClientRect()
+  var rect2 = img3slider.getBoundingClientRect()
+  var rect3 = img4slider.getBoundingClientRect()
+  var rect4 = img5slider.getBoundingClientRect()
+  var rect5 = img6slider.getBoundingClientRect()
+  var rect6 = img7slider.getBoundingClientRect()
+  var rect7 = img8slider.getBoundingClientRect()
   
-}
+  if (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+
+
+
+  document.querySelector("#number_to_change").style.animation="number_animation_appear 1s forwards"
+  document.querySelector('#img8').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  }
+ 
+
+  if (
+    rect7.top >= 0 &&
+    rect7.left >= 0 &&
+    rect7.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect7.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation 1s forwards"
+  document.querySelector('#img7').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+  }
+  if (
+    rect6.top >= 0 &&
+    rect6.left >= 0 &&
+    rect6.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect6.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation_appear 1s forwards"
+  document.querySelector('#img6').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+  }
+
+  if (
+    rect5.top >= 0 &&
+    rect5.left >= 0 &&
+    rect5.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect5.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation 1s forwards"
+  document.querySelector('#img5').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+  }
+
+  if (
+    rect4.top >= 0 &&
+    rect4.left >= 0 &&
+    rect4.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect4.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation_appear 1s forwards"
+  document.querySelector('#img4').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+  }
+
+  
+  if (
+    rect3.top >= 0 &&
+    rect3.left >= 0 &&
+    rect3.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect3.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation 1s forwards"
+  document.querySelector('#img3').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+  }
+
+  if (
+    rect2.top >= 0 &&
+    rect2.left >= 0 &&
+    rect2.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect2.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation_appear 1s forwards"
+  document.querySelector('#img2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  
+
+  }
+
+  if (
+    rect1.top >= 0 &&
+    rect1.left >= 0 &&
+    rect1.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect1.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+  {
+    document.querySelector("#number_to_change").style.animation="number_animation 1s forwards"
+  document.querySelector('#img1').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  
+  }
+
+
+
+
+
+};
+
+
+
+
+  
+  
+  
+  
+
 
  
 arrow_right.addEventListener("click", scroll_pictures_right)
+arrow_right.addEventListener("click", change_inner_html_right_arrow)
+arrow_right.addEventListener("click", change_squares_right_click)
+
 
 arrow_left.addEventListener("click", scroll_pictures_left)
+arrow_left.addEventListener("click", change_inner_html_left_arrow)
+arrow_left.addEventListener("click", change_squares_left_click)
+
 
 
 
@@ -782,3 +1253,336 @@ function hide_open_mobile_animation (){
 }
 
 document.querySelector("#cross_mobile_open").addEventListener("click",hide_open_mobile_animation )
+
+
+function change_squares_right_click() {
+  setTimeout(() => {
+    if (document.querySelector("#square1").src.match("IMG/icons/square_regular_full.svg")) {
+
+    document.querySelector("#square1").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square1").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square2").src = "IMG/icons/square_regular_full.svg"
+
+  }
+  else
+  if(document.querySelector("#square2").src.match("IMG/icons/square_regular_full.svg")) {
+
+    document.querySelector("#square1").style.animation="none"
+    document.querySelector("#square2").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square2").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square3").src = "IMG/icons/square_regular_full.svg"
+  }
+  else
+  if(document.querySelector("#square3").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square2").style.animation="none"
+    document.querySelector("#square3").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square3").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square4").src = "IMG/icons/square_regular_full.svg"
+  }
+  else
+  if(document.querySelector("#square4").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square3").style.animation="none"
+    document.querySelector("#square4").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square4").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square5").src = "IMG/icons/square_regular_full.svg"
+  }
+  else
+  if(document.querySelector("#square5").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square4").style.animation="none"
+    document.querySelector("#square5").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square5").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square6").src = "IMG/icons/square_regular_full.svg"
+  }
+
+  else
+  if(document.querySelector("#square6").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square5").style.animation="none"
+    document.querySelector("#square6").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square6").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square7").src = "IMG/icons/square_regular_full.svg"
+  }
+
+  else
+  if(document.querySelector("#square7").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square6").style.animation="none"
+    document.querySelector("#square7").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square7").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square8").src = "IMG/icons/square_regular_full.svg"
+  }
+  else
+  if(document.querySelector("#square8").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square7").style.animation="none"
+    document.querySelector("#square8").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square8").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square1").src = "IMG/icons/square_regular_full.svg"
+  }
+
+
+  
+    
+  }, 500); 
+  
+
+
+}
+  
+// -------------------------------------------------------------------------------------- 
+
+
+
+function change_squares_left_click() {
+  setTimeout(() => {
+
+    if (document.querySelector("#square8").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square8").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square8").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square7").src = "IMG/icons/square_regular_full.svg"
+  }
+  else
+  if(document.querySelector("#square7").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square8").style.animation="none"
+    document.querySelector("#square7").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square7").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square6").src = "IMG/icons/square_regular_full.svg"
+  }
+  else
+  if(document.querySelector("#square6").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square7").style.animation="none"
+    document.querySelector("#square6").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square6").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square5").src = "IMG/icons/square_regular_full.svg"
+  }
+  else
+  if(document.querySelector("#square5").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square6").style.animation="none"
+    document.querySelector("#square5").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square5").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square4").src = "IMG/icons/square_regular_full.svg"
+  }
+  else
+  if(document.querySelector("#square4").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square5").style.animation="none"
+    document.querySelector("#square4").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square4").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square3").src = "IMG/icons/square_regular_full.svg"
+  }
+
+  else
+  if(document.querySelector("#square3").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square4").style.animation="none"
+    document.querySelector("#square3").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square3").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square2").src = "IMG/icons/square_regular_full.svg"
+  }
+
+  else
+  if(document.querySelector("#square2").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square3").style.animation="none"
+    document.querySelector("#square2").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square2").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square1").src = "IMG/icons/square_regular_full.svg"
+  }
+
+  else
+  if(document.querySelector("#square1").src.match("IMG/icons/square_regular_full.svg")) {
+    document.querySelector("#square2").style.animation="none"
+    document.querySelector("#square1").style.animation="show_up_effect 1s forwards"
+    document.querySelector("#square1").src = "IMG/icons/square_regular_empty.svg"
+    document.querySelector("#square8").src = "IMG/icons/square_regular_full.svg"
+  }
+  
+
+
+
+
+  
+    
+  }, 500); 
+  
+
+
+}
+
+
+
+
+
+function square1_to_image(){
+  document.querySelector('#img1').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  document.querySelector("#square1").src = "IMG/icons/square_regular_full.svg"
+  document.querySelector("#square2").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square3").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square4").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square5").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square6").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square7").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square8").src = "IMG/icons/square_regular_empty.svg"
+
+
+}
+
+
+document.querySelector("#square1").addEventListener("click",square1_to_image)
+
+
+
+
+function square2_to_image(){
+
+  document.querySelector('#img2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  document.querySelector("#square1").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square2").src = "IMG/icons/square_regular_full.svg"
+  document.querySelector("#square3").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square4").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square5").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square6").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square7").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square8").src = "IMG/icons/square_regular_empty.svg"
+
+  
+}
+
+document.querySelector("#square2").addEventListener("click",square2_to_image)
+
+
+
+function square3_to_image(){
+  document.querySelector('#img3').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  document.querySelector("#square1").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square2").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square3").src = "IMG/icons/square_regular_full.svg"
+  document.querySelector("#square4").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square5").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square6").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square7").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square8").src = "IMG/icons/square_regular_empty.svg"
+
+
+  
+}
+document.querySelector("#square3").addEventListener("click",square3_to_image)
+  
+ 
+function square4_to_image(){
+  document.querySelector('#img4').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  document.querySelector("#square1").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square2").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square3").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square4").src = "IMG/icons/square_regular_full.svg"
+  document.querySelector("#square5").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square6").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square7").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square8").src = "IMG/icons/square_regular_empty.svg"
+
+
+  
+}
+document.querySelector("#square4").addEventListener("click",square4_to_image)
+  
+ 
+function square5_to_image(){
+  document.querySelector('#img5').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  document.querySelector("#square1").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square2").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square3").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square4").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square5").src = "IMG/icons/square_regular_full.svg"
+  document.querySelector("#square6").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square7").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square8").src = "IMG/icons/square_regular_empty.svg"
+
+
+  
+}
+document.querySelector("#square5").addEventListener("click",square5_to_image)
+  
+ 
+function square6_to_image(){
+  document.querySelector('#img6').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  document.querySelector("#square1").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square2").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square3").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square4").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square5").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square6").src = "IMG/icons/square_regular_full.svg"
+  document.querySelector("#square7").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square8").src = "IMG/icons/square_regular_empty.svg"
+
+
+  
+}
+document.querySelector("#square6").addEventListener("click",square6_to_image)
+  
+ 
+function square7_to_image(){
+  document.querySelector('#img7').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  document.querySelector("#square1").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square2").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square3").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square4").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square5").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square6").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square7").src = "IMG/icons/square_regular_full.svg"
+  document.querySelector("#square8").src = "IMG/icons/square_regular_empty.svg"
+
+
+  
+}
+document.querySelector("#square7").addEventListener("click",square7_to_image)
+ 
+function square8_to_image(){
+  document.querySelector('#img8').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+  document.querySelector("#square1").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square2").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square3").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square4").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square5").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square6").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square7").src = "IMG/icons/square_regular_empty.svg"
+  document.querySelector("#square8").src = "IMG/icons/square_regular_full.svg"
+
+
+  
+}
+
+document.querySelector("#square8").addEventListener("click",square8_to_image)
+  
+ 
+  
+
+
+function appear_hidden_content_open_menu(){
+  if (document.querySelector("#hidden_content_nav_open").style.display=="none") {
+  document.querySelector("#hidden_content_nav_open").style.animation="appear_extra_nav_hidden 0.7s forwards",
+  document.querySelector("#hidden_content_nav_open").style.display="flex"
+  
+
+
+  }
+
+  else  {
+  if (document.querySelector("#hidden_content_nav_open").style.display=="flex" ) {
+    document.querySelector("#hidden_content_nav_open").style.animation="appear_extra_nav_hidden2 0.7s forwards" 
+  }
+  
+  
+  
+  setTimeout(() => { document.querySelector("#hidden_content_nav_open").style.display="none"
+  
+    
+  }, 700);
+
+
+}
+}
+
+
+appear_hidden_content_open_menu()
+
+document.querySelector("#nav_mobile_open_3_col1").addEventListener("click", appear_hidden_content_open_menu)
+
+  
+ 
+    
+  
+
