@@ -1553,6 +1553,7 @@ document.querySelector("#square8").addEventListener("click",square8_to_image)
 
 function appear_hidden_content_open_menu(){
   if (document.querySelector("#hidden_content_nav_open").style.display=="none") {
+    document.querySelector("#open_nav_arrow1").style.animation="arrowsYanimation1 0.4s forwards"
   document.querySelector("#hidden_content_nav_open").style.animation="appear_extra_nav_hidden 0.7s forwards",
   document.querySelector("#hidden_content_nav_open").style.display="flex"
   
@@ -1562,6 +1563,7 @@ function appear_hidden_content_open_menu(){
 
   else  {
   if (document.querySelector("#hidden_content_nav_open").style.display=="flex" ) {
+    document.querySelector("#open_nav_arrow1").style.animation="arrowsYanimation2 0.4s forwards"
     document.querySelector("#hidden_content_nav_open").style.animation="appear_extra_nav_hidden2 0.7s forwards" 
   }
   
@@ -1570,7 +1572,7 @@ function appear_hidden_content_open_menu(){
   setTimeout(() => { document.querySelector("#hidden_content_nav_open").style.display="none"
   
     
-  }, 700);
+  }, 500);
 
 
 }
@@ -1584,5 +1586,40 @@ document.querySelector("#nav_mobile_open_3_col1").addEventListener("click", appe
   
  
     
+
+
+function appear_hidden_content_open_menu2(){
+
+  if (document.querySelector("#hidden_content_nav_open2").style.display=="none") {
+    document.querySelector("#open_nav_arrow2").style.animation="arrowsYanimation1 0.4s forwards"
+    document.querySelector("#hidden_content_nav_open2").style.animation="appear_extra_nav_hidden 0.7s forwards"
+    document.querySelector("#hidden_content_nav_open2").style.display="flex"
   
+
+
+  }
+
+  else  {
+  if (document.querySelector("#hidden_content_nav_open2").style.display=="flex" ) {
+    document.querySelector("#open_nav_arrow2").style.animation="arrowsYanimation2 0.4s forwards"
+    document.querySelector("#hidden_content_nav_open2").style.animation="appear_extra_nav_hidden2 0.7s forwards" 
+  }
+  
+  
+  
+  setTimeout(() => { document.querySelector("#hidden_content_nav_open2").style.display="none"
+  
+    
+  }, 500);
+
+
+}
+}
+
+
+appear_hidden_content_open_menu2()
+
+document.querySelector("#nav_mobile_open_3_col3").addEventListener("click", appear_hidden_content_open_menu2)
+
+
 
