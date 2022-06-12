@@ -1623,3 +1623,133 @@ document.querySelector("#nav_mobile_open_3_col3").addEventListener("click", appe
 
 
 
+
+function change_img_and_text_location() {
+   {
+  setInterval(() => {
+    if (window.innerWidth<760) {
+    document.querySelector("#white_mobile_p1").innerHTML="<div id=\"white_mobile_p1\"><div id=\"text_mobile_white1\"><h1 id=\"head_white_mobile\">Lorem ipsum dolor</h1><h1 id=\"p_white_mobile\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat malesuada ligula ac ultricies. Proin id suscipit dui. Curabitur sed tincidunt arcu. Aliquam arcu ex, vulputate et libero sed, scelerisque.</h1></div><img id=\"img_white1\" src=\"IMG/16.jpg\"></div>" }
+      
+  }, 100);
+
+}}
+
+   
+  
+
+
+function change_img_and_text_location2() {
+  setInterval(() => {
+    if (window.innerWidth>760) {
+      document.querySelector("#white_mobile_p1").innerHTML="<img id=\"img_white1\" src=\"IMG/16.jpg\"><div id=\"text_mobile_white1\"><h1 id=head_white_mobile\">Lorem ipsum dolor</h1><h1 id=\"p_white_mobile\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat malesuada ligula ac ultricies. Proin id suscipit dui. Curabitur sed tincidunt arcu. Aliquam arcu ex, vulputate et libero sed, scelerisque.</h1>" 
+    }
+    
+  }, 100);
+
+  
+}
+
+
+
+
+
+window.onload=change_img_and_text_location()
+window.onload=change_img_and_text_location2()
+
+
+
+
+function change_img_and_text_location3() {
+  {
+ setInterval(() => {
+   if (window.innerWidth<760) {
+   document.querySelector("#white_mobile_p2").innerHTML="<div id=\"white_mobile_p1\"><div id=\"text_mobile_white1\"><h1 id=\"head_white_mobile\">Lorem ipsum dolor</h1><h1 id=\"p_white_mobile\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat malesuada ligula ac ultricies. Proin id suscipit dui. Curabitur sed tincidunt arcu. Aliquam arcu ex, vulputate et libero sed, scelerisque.</h1></div><img id=\"img_white1\" src=\"IMG/14.jpg\"></div>" }
+     
+ }, 100);
+
+}}
+
+  
+ 
+
+
+function change_img_and_text_location4() {
+ setInterval(() => {
+   if (window.innerWidth>760) {
+     document.querySelector("#white_mobile_p2").innerHTML="<img id=\"img_white1\" src=\"IMG/14.jpg\"><div id=\"text_mobile_white1\"><h1 id=head_white_mobile\">Lorem ipsum dolor</h1><h1 id=\"p_white_mobile\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat malesuada ligula ac ultricies. Proin id suscipit dui. Curabitur sed tincidunt arcu. Aliquam arcu ex, vulputate et libero sed, scelerisque.</h1>" 
+   }
+   
+ }, 100);
+
+ 
+}
+
+
+window.onload=change_img_and_text_location3()
+window.onload=change_img_and_text_location4()
+
+
+function change_img_and_text_location5() {
+  {
+ setInterval(() => {
+   if (window.innerWidth<760) {
+   document.querySelector("#white_mobile_p3").innerHTML="<div id=\"white_mobile_p1\"><div id=\"text_mobile_white1\"><h1 id=\"head_white_mobile\">Lorem ipsum dolor</h1><h1 id=\"p_white_mobile\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat malesuada ligula ac ultricies. Proin id suscipit dui. Curabitur sed tincidunt arcu. Aliquam arcu ex, vulputate et libero sed, scelerisque.</h1></div><img id=\"img_white1\" src=\"IMG/21.jpg\"></div>" }
+     
+ }, 100);
+
+}}
+
+  
+ 
+
+
+function change_img_and_text_location6() {
+ setInterval(() => {
+   if (window.innerWidth>760) {
+     document.querySelector("#white_mobile_p3").innerHTML="<img id=\"img_white1\" src=\"IMG/21.jpg\"><div id=\"text_mobile_white1\"><h1 id=head_white_mobile\">Lorem ipsum dolor</h1><h1 id=\"p_white_mobile\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat malesuada ligula ac ultricies. Proin id suscipit dui. Curabitur sed tincidunt arcu. Aliquam arcu ex, vulputate et libero sed, scelerisque.</h1>" 
+   }
+   
+ }, 100);
+
+ 
+}
+
+
+
+
+window.onload=change_img_and_text_location5()
+window.onload=change_img_and_text_location6()
+
+
+
+function change_img_and_text_location7() {
+  {
+ setInterval(() => {
+   if (window.innerWidth<760) {
+   document.querySelector("#white_mobile_p4").innerHTML="<div id=\"white_mobile_p1\"><div id=\"text_mobile_white1\"><h1 id=\"head_white_mobile\">Lorem ipsum dolor</h1><h1 id=\"p_white_mobile\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat malesuada ligula ac ultricies. Proin id suscipit dui. Curabitur sed tincidunt arcu. Aliquam arcu ex, vulputate et libero sed, scelerisque.</h1></div><img id=\"img_white1\" src=\"IMG/22.jpg\"></div>" }
+     
+ }, 100);
+
+}}
+
+  
+ 
+
+
+function change_img_and_text_location8() {
+ setInterval(() => {
+   if (window.innerWidth>760) {
+     document.querySelector("#white_mobile_p4").innerHTML="<img id=\"img_white1\" src=\"IMG/22.jpg\"><div id=\"text_mobile_white1\"><h1 id=head_white_mobile\">Lorem ipsum dolor</h1><h1 id=\"p_white_mobile\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat malesuada ligula ac ultricies. Proin id suscipit dui. Curabitur sed tincidunt arcu. Aliquam arcu ex, vulputate et libero sed, scelerisque.</h1>" 
+   }
+   
+ }, 100);
+
+ 
+}
+
+window.onload=change_img_and_text_location7()
+window.onload=change_img_and_text_location8()
+
+
+
+
