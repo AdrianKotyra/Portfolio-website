@@ -2,10 +2,13 @@
 
 
 body {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Clarkson",Helvetica,sans-serif;
     background: linear-gradient(-45deg, #ee7752, #ca94a9, #aaccd8, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    font-weight: 500;
+    font-style: normal;
+    
     
     
     margin:0;
@@ -200,7 +203,7 @@ visibility: hidden;
 
 
 #nav_3_middle *{
-    margin-right: 1vw;
+    
 }
 
 #text1_4_col:hover *{
@@ -241,7 +244,7 @@ visibility: hidden;
 }
 #wrapper_white{
     background-color:rgb(248, 241, 241);
-    height: 210vw;
+    height: 100%;
     
     
     
@@ -294,6 +297,11 @@ visibility: hidden;
 #head_white {
     font-size: 3vw;
    
+}
+
+#img_white1, #img_white2, #img_white3, #img_white4 {
+    width: 40vw;
+    height: 40vw;
 }
 #head_white2, #head_white3, #head_white4, #head_white5, #head_white6, #head_white7, #head_white8, #head_white9 {
     top:5vw;
@@ -415,9 +423,9 @@ position: relative;
 
 
 #bottom_text2 {
-    font-size: 1.5vw;
+    font-size: 22px;
     font-weight: 400;
-    padding-bottom: 5vw;
+    padding-bottom: 30px;
     
 
 }
@@ -781,6 +789,32 @@ margin-top: 4vw;
 
 }
 
+#white_mobile_p1, #white_mobile_p2,  #white_mobile_p3, #white_mobile_p4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+#head_white_mobile {
+    font-size: 24px;
+
+}
+#p_white_mobile {
+    font-size: 18px;
+    line-height: 1.2em;
+}
+#text_mobile_white1 {
+    margin-left: 5%;
+}
+
+#white_content_mobile {
+    display: none;
+    padding-top: 5vw;
+}
+
 #p_white9 {
     margin-bottom: 10vw;
 }
@@ -1020,6 +1054,11 @@ margin-top: 4vw;
     cursor: pointer;
 }
 
+#middle_nav1, #middle_nav2{
+    margin-right: 15px;
+    
+}
+
 #right_nav1, #right_nav2 {
     display: inline-block;
     margin-top: 30px;
@@ -1034,9 +1073,12 @@ margin-top: 4vw;
 }
 #logo_img *  {
     
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
+    margin-top: 4px;
+    margin-right: 5px;
+    margin-left: 20px
 }
 
 
@@ -2088,6 +2130,195 @@ margin-top: 4vw;
 
 
 
+@media only screen and (max-width:1000px) {
+
+    #white_content {
+        display: none;
+        
+        
+    }
+           
+}
+
+@media only screen and (max-width:1000px) {
+
+    #white_content_mobile {
+        display: block;
+        
+        
+    }
+           
+}
+
+
+@media only screen and (max-width:760px) {
+
+    #white_mobile_p1, #white_mobile_p2, #white_mobile_p3, #white_mobile_p4 {
+        display: block;
+        
+        
+    }
+           
+}
+
+@media only screen and (max-width:760px) {
+
+    #text_mobile_white1{
+        margin-left: 0;
+        
+        
+    }
+           
+}
+
+
+@media only screen and (max-width:760px) {
+
+    #img_white1 {
+        width: 80vw;
+        height: 60vw;
+        
+        
+    }
+           
+}
 
 
 
+@media only screen and (max-width:760px) {
+
+    #white_mobile_p4 {
+        padding-bottom: 20vw;
+       
+    }
+           
+}
+
+
+
+@media only screen and (max-width:1460px) {
+
+    #bottom_text2 {
+        font-size: 18px;
+       
+        
+    }
+           
+}
+
+@media only screen and (max-width:1460px) {
+
+    #bottom, #get_started2 {
+        font-size: 24px;
+       
+        
+    }
+           
+}
+
+@media only screen and (max-width:760px) {
+
+    #bottom_text {
+        flex-direction: column;
+       
+        
+        
+        
+        
+    }
+           
+}
+
+
+@media only screen and (max-width:960px) {
+
+    #wrapper_white2 {
+       height: 50vw;
+       
+    }
+           
+}
+
+
+
+@media only screen and (max-width:760px) {
+
+    #wrapper_white2 {
+       height: 90vw;
+       
+    }
+           
+}
+
+@media only screen and (max-width:500px) {
+
+    #wrapper_white2 {
+       height: 120vw;
+       
+    }
+           
+}
+
+@media only screen and (max-width:450px) {
+
+    #wrapper_white2 {
+       height: 160vw;
+       
+    }
+           
+}
+
+
+@media only screen and (max-width:760px) {
+
+    #bottom_text2, #bottom, #get_started2 {
+       margin-left: 5%;
+       
+    }
+           
+}
+
+
+
+@media only screen and (max-width:760px) {
+
+    #bottom, #get_started2 {
+       
+       margin-left: 10%;
+       
+    }
+           
+}
+
+@media only screen and (max-width:760px) {
+
+    #get_started2 {
+        margin-bottom: 30px;
+       
+       margin-left: 10%;
+       
+    }
+           
+}
+
+
+@media only screen and (max-width:760px) {
+
+    #bottom {
+       
+       width: 100%;
+       
+    }
+           
+}
+
+
+@media only screen and (max-width:760px) {
+
+    #bottom {
+       
+       width: 100%;
+       
+    }
+           
+}
