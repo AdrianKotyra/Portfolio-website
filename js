@@ -23,12 +23,12 @@ var button4_gray_slider = document.getElementById("window_settings_text_5")
 
 
 
-var head3 = document.getElementById("head_white3")
+var head3 = document.getElementById("check_scroll_img")
 var head4 = document.getElementById("head_white4")
 var head5 = document.getElementById("head_white5")
-var head6 = document.getElementById("head_white6")
+var head6 = document.getElementById("check_scroll_img2")
 var head7 = document.getElementById("head_white7")
-var head8 = document.getElementById("head_white8")
+var head8 = document.getElementById("check_scroll_img3")
 var head9 = document.getElementById("head_white9")
 var imgwhite = document.getElementById("img_white")
 var half2 = document.getElementById("white_half2")
@@ -741,39 +741,32 @@ splitscroll()
 
 function change_img_on_scroll2() {
   
-  var rect2 = head4.getBoundingClientRect();
+  var rect2 = head3.getBoundingClientRect();
   var rect3 = head6.getBoundingClientRect();
   var rect4 = head8.getBoundingClientRect();
+
+
   if (rect2.top >= 0 &&
     rect2.left >= 0 &&
     rect2.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     rect2.right <= (window.innerWidth || document.documentElement.clientWidth)
-    )
+  )
 
   {
+    
 
-    document.querySelector("#img_white_hidden1").style.animation="none"
-    document.querySelector("#img_white_hidden2").style.animation="none"
+    document.querySelector("#img_white_hidden1").offsetWidth;
 
+    document.querySelector("#img_white_hidden2").offsetWidth;
     
 
     document.querySelector("#img_white_hidden1").style.animation="show_up_effect_revert 1s forwards"
     document.querySelector("#img_white_hidden2").style.animation="show_up_effect_revert 1s forwards"
-    
-  
-    document.querySelector("#img_white_hidden2").offsetWidth;
-    document.querySelector("#img_white_hidden1").offsetWidth;
-
-
-    document.querySelector("#img_white").style.animation="none"
-
-    
-
-    
 
    
     
-
+  
+    document.querySelector("#img_white").style.animation="none"
 
 
     // document.getElementById("white_half1").innerHTML="<h1 id=\"head_white\">Lorem ipsum dolor</h1> <img id=\"img_white\" src=\"IMG/10.jpg\">"
@@ -781,60 +774,68 @@ function change_img_on_scroll2() {
     
     
     
-    
-  }
+  } 
+ 
+  
   
 
-  else if (rect3.top >= 0 &&
+ 
+
+  
+
+  if (rect3.top >= 0 &&
     rect3.left >= 0 &&
     rect3.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     rect3.right <= (window.innerWidth || document.documentElement.clientWidth)
-    )
+  )
     
-
-
 
   { 
+
     
-
-    document.querySelector("#img_white").offsetWidth;
-
-    document.querySelector("#img_white").style.animation="show_up_effect_revert 1s forwards"
-
-
     document.querySelector("#img_white_hidden2").offsetWidth;
-    
-
+    document.querySelector("#img_white_hidden1").offsetWidth;
+    document.querySelector("#img_white").offsetWidth;
     document.querySelector("#img_white").style.animation="show_up_effect_revert 1s forwards"
-    document.querySelector("#img_white_hidden1").style.animation="none"
-    document.querySelector("#img_white_hidden2").style.animation="show_up_effect_revert 1s forwards"
 
     
+    document.querySelector("#img_white_hidden2").style.animation="show_up_effect_revert 1s forwards"
     
    
+    document.querySelector("#img_white_hidden1").style.animation="none"
     
+    
+  }
 
+  
     
     
 
     // document.getElementById("white_half1").innerHTML="<h1 id=\"head_white\">Lorem ipsum dolor</h1> <img id=\"img_white\" src=\"IMG/16.jpg\">"
     
-  }
+  
+
+
  
-  else if (rect4.top >= 0 &&
+  if (rect4.top >= 0 &&
     rect4.left >= 0 &&
     rect4.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     rect4.right <= (window.innerWidth || document.documentElement.clientWidth)
-    )
+  )
+
   {
     
-    document.querySelector("#img_white").offsetWidth;
+  
+     document.querySelector("#img_white").offsetWidth;
     document.querySelector("#img_white_hidden2").offsetWidth;
     document.querySelector("#img_white_hidden1").offsetWidth;
 
     document.querySelector("#img_white_hidden1").style.animation="show_up_effect_revert 1s forwards"
     document.querySelector("#img_white").style.animation="show_up_effect_revert 1s forwards"
     document.querySelector("#img_white_hidden2").style.animation="none"
+
+   
+  }
 
     
       
@@ -844,14 +845,18 @@ function change_img_on_scroll2() {
     
     // document.getElementById("white_half1").innerHTML="<h1 id=\"head_white\">Lorem ipsum dolor</h1> <img id=\"img_white\" src=\"IMG/14.jpg\">"
     
-  }
+}
+
+
+
+
 
 
   
 
 
 
-}
+
 function clear_img (){
   document.getElementById("white_half1").style.animation=""
 }
@@ -875,8 +880,11 @@ function appear_elements_animation() {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth) 
   ) 
    
-  {
-    middle_content.style.display="flex"
+  { setTimeout(() => {
+    middle_content.style.display="flex",  middle_content.style.visibility="visible", middle_content.style.animation="appear 2s forwards"
+    
+  }, 500);
+    
   }
 
   
@@ -910,8 +918,13 @@ function appear_elements_animation2() {
     rect111.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     rect111.right <= (window.innerWidth || document.documentElement.clientWidth)
   ) 
-  {
-    text_gray_all.style.display="table"
+  { setTimeout(() => {
+    text_gray_all.style.visibility="visible"
+    text_gray_all.style.animation="appear 2s forwards"
+    
+  }, 300);
+    
+
   }
   else {
     
@@ -945,7 +958,11 @@ function appear_elements_animation3() {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   ) 
   {
-    text_semi_black_both.style.display="block"
+    setTimeout(() => {
+      text_semi_black_both.style.display="inline-block", text_semi_black_both.style.visibility="visible", text_semi_black_both.style.animation="appear 2s forwards"
+      
+    }, 300);
+    
   }
   else {
     
@@ -974,8 +991,11 @@ function appear_elements_animation4() {
     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   ) 
-  {
-    bottom_text.style.display="flex"
+  { setTimeout(() => {
+    bottom_text.style.visibility="visible", bottom_text.style.animation="appear 2s forwards"
+    
+  }, 300);
+    
   }
   else {
     
@@ -2233,3 +2253,23 @@ bottom_hidden_content_appear_mobile5 ()
 
 document.querySelector("#col5_mobile").addEventListener("click", bottom_hidden_content_appear_mobile5) 
 document.querySelector("#col5_mobile").addEventListener("click", change_arrow_hidden_mobile5) 
+
+
+
+
+
+  
+
+function loadImage()
+{
+  var img = document.querySelector("#screen_img")
+  img.src = "IMG/prescreenjpggif.gif";
+}
+
+
+
+
+
+
+
+
