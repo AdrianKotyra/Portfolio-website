@@ -2259,12 +2259,49 @@ document.querySelector("#col5_mobile").addEventListener("click", change_arrow_hi
 
 
   
+function top_text_animation() {
 
-function loadImage()
-{
-  var img = document.querySelector("#screen_img")
-  img.src = "IMG/prescreenjpggif.gif";
+  setTimeout(() => {
+    document.querySelector("#text4_top").style.animation="none"
+    
+    document.querySelector("#text1_top").style.animation="text1_top_animation 2s ease-in-out"
+    
+  }, 2000);
+
+  setTimeout(() => {
+    document.querySelector("#text2_top").offsetWidth;
+    document.querySelector("#text2_top").style.animation="text1_top_animation 2s ease-in-out"
+    document.querySelector("#text1_top").style.animation="none"
+    
+  }, 4000);
+
+  setTimeout(() => {
+    document.querySelector("#text3_top").offsetWidth;
+    document.querySelector("#text3_top").style.animation="text1_top_animation 2s ease-in-out"
+    document.querySelector("#text2_top").style.animation="none"
+    
+  }, 6000);
+
+  setTimeout(() => {
+    document.querySelector("#text4_top").offsetWidth;
+    document.querySelector("#text4_top").style.animation="text1_top_animation 2s ease-in-out"
+    document.querySelector("#text3_top").style.animation="none"
+    
+  }, 8000);
+
+  
+    
+ 
+  
 }
+
+top_text_animation()
+setInterval(top_text_animation,
+10000);
+
+
+
+
 
 
 
