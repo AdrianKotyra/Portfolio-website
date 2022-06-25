@@ -11,6 +11,7 @@ body {
     font-weight: 500;
     font-style: normal;
     overflow-x: hidden;
+
     
    
     
@@ -18,6 +19,10 @@ body {
     
 }
   
+
+.change_background {
+    background: white;
+}
   
   
 
@@ -105,6 +110,10 @@ visibility: hidden;
     z-index: 99;
     padding-top: 10px;
     height: 70px;
+    animation: number_animation_appear 1s forwards;
+    
+    
+    
     
     
     
@@ -487,8 +496,15 @@ position: relative;
     
 }
 
+#text1_top, #text2_top, #text3_top, #text4_top {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+    
+}
+
 #nav_mobile_open_3_col1, #nav_mobile_open_3_col3{
     cursor: pointer;
+
 
 
 }
@@ -648,9 +664,11 @@ margin-top: 4vw;
 #x_to_close_window{
     width: 30px;
     height: 30px;
-    transform: translate(85vw, 3vw);
+    transform: translate(85vw, 5vw);
     cursor: pointer;
-    position: absolute
+    position: sticky;
+
+    
     
     
     
@@ -784,7 +802,6 @@ margin-top: 4vw;
 }
 #extra_nav2_text12:hover, #extra_nav2_text13:hover, #extra_nav2_text14:hover, #extra_nav2_text15:hover, #extra_nav2_text16:hover{
     display: inline-block;
-    
     color: white;
     transition: color 0.5s;
     
@@ -798,6 +815,11 @@ margin-top: 4vw;
     display: none;
 
     
+}
+
+
+.class_animation_for_nav {
+    animation: number_animation_appear 1s forwards
 }
 
 @keyframes arrows_animation{
@@ -1163,15 +1185,192 @@ margin-top: 4vw;
 }
 #logo_name {
     margin-top: 10px;
+    color: rgb(236, 160, 236);
+    font-family: 'Smooch', cursive;
+    font-size: 35px;
+
 }
 #logo_img *  {
     
     width: 30px;
     height: 30px;
     cursor: pointer;
-    margin-top: 4px;
+    margin-top: 8px;
     margin-right: 5px;
     margin-left: 20px
+}
+
+#img_slider_text1_content_wrapper {
+    height: 2000px;
+    background-color:  white;
+    top: 0;
+    width: 100%;
+    
+    position: absolute;
+    z-index: 98;
+    display: none;
+    animation: appear 0.5s forwards;
+    
+    
+
+}
+#content_wrapper_space {
+    padding-top: 200px;
+}
+
+.big_text {
+    font-size: 40px;
+}
+
+#top_content_wrapper_text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    padding-top: 70px
+   
+    
+}
+#text_content_pic {
+    width: 40vw;
+    height: 40vw;
+}
+#text_content_big {
+    align-self: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: left;
+    width: 100%;
+    display: flex;
+}
+
+
+
+#content_wrapper_text_img2 {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    
+    
+}
+.small_texts {
+    font-size: 22px;
+    margin: 10px;
+    
+    
+    
+}
+
+#texts_content_wrapper{
+    display: flex;
+    flex-direction: row;
+   
+    
+
+}
+
+
+#text_content_1 {
+    color: black;
+    z-index: 300;
+    font-size: 35px;
+    font-weight: 700;
+    
+    
+    
+    
+}
+
+#content_wrapper_text_img {
+    background-color:  #fdf0e6;
+    height: 300vw;
+    margin-left: 5%;
+    margin-right: 5%;
+  
+   
+   
+}
+
+#text1_nav_wrapper1{
+    font-size: 25px;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    cursor: pointer;
+    
+   
+    
+}
+
+
+#x_to_close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    transform: translate(90vw, 1vw);
+    cursor: pointer;
+    
+
+    
+   
+}
+
+#middle_text_content_wrapper{
+    display: table;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+#big_text_middle {
+    margin-bottom: 40px;
+
+}
+#text_1_wrapper_nav{
+    background-color: white;
+    height: 200px;
+    padding-right: 100px;
+    padding-left: 100px;
+    width: 100%;
+    
+    position: fixed;
+    display: none;
+    z-index: 300;
+    top: 0;
+   
+    
+    
+    
+
+   
+    
+}
+#text1_nav_wrapper1:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+#two_elem_text_1_wrapper_nav{
+    padding-top: 80px;
+    
+    
+   
+}
+
+#text_1_wrapper_nav #logo_name{
+    display: inline-block;
+    margin-left: 20px;
+    
+  
+    
+    
+
 }
 
 
@@ -1391,34 +1590,54 @@ left: 85%;
 
 
 #text1_top {
+    animation: text1_top_animation 8s forwards;
+    display: none;
+
   
     
 }
 
 #text2_top {
+    transform: translate(60vw, 100px);
     
 
+    
+    animation: text1_top_animation 6s forwards;
+    display: none;
     
     
 }
 
 #text3_top {
+    transform: translate(60vw, 200px);
+    animation: text1_top_animation 4s forwards;
+    display: none;
     
     
 }
 
 
 #text4_top { 
+    transform: translate(60vw, 300px);
+    animation: text1_top_animation 2s forwards;
+    display: none;
     
 }
 
 
 @keyframes text1_top_animation{
     0%{opacity: 0;}
-    50%{opacity: 1;}
-    100%{opacity: 0;}
+    100%{opacity: 1;}
 
 }
+
+@keyframes text1_top_animation_hide{
+    0%{opacity: 1;}
+    1000%{opacity: 0;}
+    
+
+}
+
 
 #title_img {
    
@@ -1884,6 +2103,8 @@ left: 85%;
   
 }
 
+
+
 @keyframes appear2{
     0% {opacity:0; transform: translatex(1vw);}
     100% {opacity:1; transform: translatex(0vw);}
@@ -2115,7 +2336,7 @@ left: 85%;
     content: "";
   position: absolute;
   width: 0;
-  height: 0.6vw;
+  height: 0.2vw;
   bottom: 0;
   right: 0;
   background-color: rgb(255, 255, 255);
@@ -2139,7 +2360,7 @@ left: 85%;
 
  #extra_nav2_text_to_display {
     font-size: 1vw;
-    
+    color: white;
     text-align: left;
     width: 80%;
     margin-top: 1vw;
@@ -2208,6 +2429,41 @@ left: 85%;
         
     }
 }
+
+
+@media only screen and (max-width:880px) {
+
+    #text2_top{
+        transform: translate(60vw, 65px);
+        
+        
+        
+    }
+}
+@media only screen and (max-width:880px) {
+
+    #text3_top{
+        transform: translate(60vw, 130px);
+        
+        
+        
+    }
+}
+
+@media only screen and (max-width:880px) {
+
+    #text4_top{
+        transform: translate(60vw, 195px);
+        
+        
+        
+    }
+}
+
+
+
+
+
 
 
 @media only screen and (max-width:880px) {
@@ -2989,10 +3245,12 @@ left: 85%;
 
 }
 
+
 @media only screen and (max-width:880px) {
 
     .headbig {
         font-size: 5rem;
+        
 
         
 
@@ -3007,8 +3265,9 @@ left: 85%;
 @media only screen and (max-width:880px) {
 
     #text_top_container {
-        transform: translate(-50%);
+        transform: translate(-53%);
         padding-top: 20vw;
+        padding-bottom: 100px;
         
         
         
