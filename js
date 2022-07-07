@@ -2636,16 +2636,17 @@ $(window).scroll(function(){
 
 function show_hidden_content_text1(){
   $("#img1_text1").click(function () {
+    document.addEventListener("scroll", show_hidden_content_imgs_fade_animation)
     window.scrollTo(0, 0)
     $("#img_slider_text1_content_wrapper").fadeIn(2000)
     $("#text_1_wrapper_nav").show()
-    $("#navigation").hide()
+    
     $("#title_img").hide()
     $("#middle_wrapper").hide()
     $("#wrapper_black").hide()
     $("#wrapper_semi_black").hide()
     $("#wrapper_white2").hide()
-    $("#white_content").hide()
+    
     
     
     
@@ -2667,6 +2668,7 @@ function show_hidden_content_text1(){
 // $("#wrapper_semi_black").hide()
 // $("#wrapper_white2").hide()
 // $("#white_content").hide()
+// $("#white_content_mobile").hide()
 
 show_hidden_content_text1()
 
@@ -2675,16 +2677,29 @@ show_hidden_content_text1()
 function hide_hidden_content_text1() {
 
   $("#x_to_close").click(function(){
+
+    
     $("#img_slider_text1_content_wrapper").fadeIn(500)
     $("#img_slider_text1_content_wrapper").hide(500)
-    $("#navigation").show()
+   
     $("#text_1_wrapper_nav").hide()
     $("#title_img").show()
     $("#middle_wrapper").show()
     $("#wrapper_black").show()
     $("#wrapper_semi_black").show()
     $("#wrapper_white2").show()
-    $("#white_content").show()
+    
+    $("#text_1_wrapper_nav").hide()
+    setTimeout(() => {
+      
+      document.querySelector('#img1').scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+     
+      
+    }, 500);
+    
+
+
+    
     
 
     
@@ -2700,5 +2715,287 @@ function hide_hidden_content_text1() {
 
 hide_hidden_content_text1()
 
+
+
+function show_hidden_content_imgs_fade_animation() {
+  var img1_hidden_content = document.getElementById("col1_img_hidden")
+  var rect = img1_hidden_content.getBoundingClientRect();
+  var img1_hidden_content2 = document.getElementById("col1_img_hidden2")
+  var rect2 = img1_hidden_content2.getBoundingClientRect();
+
+  var img1_hidden_content3 = document.getElementById("col1_img_hidden3")
+  var rect3 = img1_hidden_content3.getBoundingClientRect();
+
+  var img1_hidden_content4 = document.getElementById("col2_img_hidden1")
+  var rect4 = img1_hidden_content4.getBoundingClientRect();
+
+  var img1_hidden_content5 = document.getElementById("col2_img_hidden2")
+  var rect5 = img1_hidden_content5.getBoundingClientRect();
+
+  var img1_hidden_content6 = document.getElementById("col2_img_hidden3")
+  var rect6 = img1_hidden_content6.getBoundingClientRect();
+
+  var img1_hidden_content7 = document.getElementById("col2_img_hidden4")
+  var rect7 = img1_hidden_content7.getBoundingClientRect();
+
+  var img1_hidden_content8 = document.getElementById("col3_img_hidden1")
+  var rect8 = img1_hidden_content8.getBoundingClientRect();
+
+  var img1_hidden_content9 = document.getElementById("col3_img_hidden2")
+  var rect9 = img1_hidden_content9.getBoundingClientRect();
+
+  var img1_hidden_content10 = document.getElementById("col3_img_hidden3")
+  var rect10 = img1_hidden_content10.getBoundingClientRect();
+
+
+  var img1_hidden_content11 = document.getElementById("btn_hidden_wrapper")
+  var rect11 = img1_hidden_content11.getBoundingClientRect();
+
+
+
+
+
+
+
+
+  if (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#col1_img_hidden").style.visibility="visible"
+    document.querySelector("#col1_img_hidden").style.animation="appear 1s forwards"
+  }
+
+  if (
+    rect2.top >= 0 &&
+    rect2.left >= 0 &&
+    rect2.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect2.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#col1_img_hidden2").style.visibility="visible"
+    document.querySelector("#col1_img_hidden2").style.animation="appear 1s forwards"
+  }
+
+
+  if (
+    rect3.top >= 0 &&
+    rect3.left >= 0 &&
+    rect3.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect3.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#col1_img_hidden3").style.visibility="visible"
+    document.querySelector("#col1_img_hidden3").style.animation="appear 1s forwards"
+  }
+
+  if (
+    rect4.top >= 0 &&
+    rect4.left >= 0 &&
+    rect4.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect4.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#col2_img_hidden1").style.visibility="visible"
+    document.querySelector("#col2_img_hidden1").style.animation="appear 1s forwards"
+  }
+
+  if (
+    rect5.top >= 0 &&
+    rect5.left >= 0 &&
+    rect5.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect5.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#col2_img_hidden2").style.visibility="visible"
+    document.querySelector("#col2_img_hidden2").style.animation="appear 1s forwards"
+  }
+
+  if (
+    rect6.top >= 0 &&
+    rect6.left >= 0 &&
+    rect6.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect6.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#col2_img_hidden3").style.visibility="visible"
+    document.querySelector("#col2_img_hidden3").style.animation="appear 1s forwards"
+  }
+
+  if (
+    rect7.top >= 0 &&
+    rect7.left >= 0 &&
+    rect7.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect7.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#col2_img_hidden4").style.visibility="visible"
+    document.querySelector("#col2_img_hidden4").style.animation="appear 1s forwards"
+  }
+
+  if (
+    rect8.top >= 0 &&
+    rect8.left >= 0 &&
+    rect8.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect8.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#col3_img_hidden1").style.visibility="visible"
+    document.querySelector("#col3_img_hidden1").style.animation="appear 1s forwards"
+  }
+
+  if (
+    rect9.top >= 0 &&
+    rect9.left >= 0 &&
+    rect9.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect9.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#col3_img_hidden2").style.visibility="visible"
+    document.querySelector("#col3_img_hidden2").style.animation="appear 1s forwards"
+  }
+
+  if (
+    rect10.top >= 0 &&
+    rect10.left >= 0 &&
+    rect10.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect10.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#col3_img_hidden3").style.visibility="visible"
+    document.querySelector("#col3_img_hidden3").style.animation="appear 1s forwards"
+  }
+
+
+  if (
+    rect11.top >= 0 &&
+    rect11.left >= 0 &&
+    rect11.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect11.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  
+  {
+    document.querySelector("#img_hidden_content1").style.visibility="visible"
+    document.querySelector("#img_hidden_content1").style.animation="appear 1s forwards"
+  }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("hamb_content_mobile").addEventListener("click",() =>{
+  
+
+  document.getElementById("change_content").style.display="none"
+  document.getElementById("text_1_wrapper_nav").style.display="none"
+  document.getElementById("wrapper_gray").style.visibility="hidden"
+  document.getElementById("hidden_hidden_menu").style.display="table"
+  document.getElementById("nav_mobile").style.visibility="hidden"
+  document.getElementById("white_content_mobile").style.visibility="hidden"
+  document.querySelector("body").style.overflowY="hidden"
+ 
+  
+  
+  
+
+
+} )
+
+
+document.getElementById("x_to_close_hidden").addEventListener("click",() =>{
+  
+  document.getElementById("change_content").style.animation="appear 1s forwards"
+  document.getElementById("change_content").style.display="table"
+  document.getElementById("text_1_wrapper_nav").style.display="block"
+  document.getElementById("wrapper_gray").style.visibility="visible"
+  document.getElementById("hidden_hidden_menu").style.display="none"
+  document.getElementById("nav_mobile").style.visibility="visible"
+  document.getElementById("white_content_mobile").style.visibility="visible"
+  document.querySelector("body").style.overflowY="scroll"
+  
+  
+} )
+
+
+
+document.querySelector("#middle_middle_short").addEventListener("mouseover", ()=>{
+  document.querySelector("#middle_arrow").style.transition="0.3s"
+  document.querySelector("#middle_arrow").style.transform="rotateZ(90deg)"
+})
+
+document.querySelector("#middle_middle_short").addEventListener("mouseout", ()=>{
+  document.querySelector("#middle_arrow").style.transition="0.3s"
+  document.querySelector("#middle_arrow").style.transform="rotateZ(0deg)"
+})
+
+
+
+
+document.querySelector("#img1_text2").addEventListener("click", ()=>{
+  window.scrollTo(0, 0);
+  $("#main").hide()
+  document.querySelector("#text_1_wrapper_nav3_sub_main").style.display="inline-block"
+  $("#sub_main2").show()
+  
+  
+  
+  
+
+})
+
+document.querySelector("#x_to_close_submain").addEventListener("click", ()=>{
+  $("#sub_main2").fadeIn()
+  $("#main").show()
+  $("#text_1_wrapper_nav3_sub_main").hide()
+  $("#sub_main2").hide()
+
+  document.querySelector('#img1_text2').scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+
+})
+
+
+
+function sub_main_top_slide_up() {
+  if  (window.scrollY>10) {
+    document.getElementById("top_sub_main").style.animation="slide_up_submain 1s forwards"
+    
+  }
+  else {
+    document.getElementById("top_sub_main").style.animation="slide_down_submain 1s forwards"
+
+  }
+
+}
+document.addEventListener("scroll", sub_main_top_slide_up)
 
 
