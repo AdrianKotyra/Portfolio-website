@@ -7,12 +7,9 @@ html {
 body {
     font-family: 'Joan', serif;
    
-    
     font-weight: 500;
     font-style: normal;
     overflow-x: hidden;
-    
-
     
    
     
@@ -38,6 +35,235 @@ body {
     
     
 }
+#contact_messenger {
+    
+    position: sticky;
+    top: 85vh;
+    z-index: 999;
+    display: none;
+    right: 0;
+    background-color: rgb(6, 150, 233);
+    
+
+    
+    
+    
+    
+    
+    
+}
+#contact_img {
+    position: absolute;
+    width: 120px;
+    right: 0;
+    cursor: pointer;
+    z-index: 999;
+    animation: appear_messenger 1s forwards;
+    transition: 1s;
+    
+   
+}
+#send_image_messenger, #send_image_messenger_message_sent {
+    width: 40px;
+    background-color: rgb(6, 150, 233);
+    border-radius: 50%;
+    padding: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+#send_image_messenger:hover, #send_image_messenger_message_sent:hover {
+    background-color: rgb(13, 13, 14);
+    transition: 0.5s ease;
+   
+   
+
+}
+#messenger_hamb_img, #messenger_hamb_img_email {
+    width: 20px;
+    cursor: pointer;
+   
+    
+
+    
+}
+
+#window_messenger {
+    
+    width: 500px;
+    height: 550px;
+    border: 1px solid rgb(6, 150, 233);
+    box-shadow: 0 0 2em rgb(6, 150, 233);
+    border-bottom: 3px solid rgb(6, 150, 233);;
+    position: fixed;
+    top: 360px;
+    right: 0;
+    z-index: 99999;
+    background-color: white;
+    display: none;
+    animation: appear_messenger 1s forwards;
+    
+    
+    
+    
+    
+    
+}
+
+
+#window_messenger_email {
+    width: 500px;
+    height: 550px;
+    border: 1px solid rgb(6, 150, 233);
+    box-shadow: 0 0 2em rgb(6, 150, 233);
+    border-bottom: 3px solid rgb(6, 150, 233);;
+    position: fixed;
+    top: 360px;
+    right: 0;
+    z-index: 99999;
+    background-color: white;
+    display: none;
+    animation: appear_messenger 1s forwards;
+
+}
+
+#window_messenger_message_sent {
+    width: 500px;
+    height: 550px;
+    border: 1px solid rgb(6, 150, 233);
+    box-shadow: 0 0 2em rgb(6, 150, 233);
+    border-bottom: 3px solid rgb(6, 150, 233);;
+    position: fixed;
+    top: 360px;
+    right: 0;
+    z-index: 99999;
+    background-color: white;
+    display: none;
+    animation: appear_messenger 1s forwards;
+
+}
+.profile_img {
+    border-radius: 50%;
+    width: 100px;
+
+}
+#messenger_content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+    
+    
+}
+#messenger_content_message_sent {
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: column;
+    
+
+}
+#profile_description {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+#profile_description_message_sent {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    padding: 50px;
+    text-align: center;
+    font-size: 2rem;
+    justify-content: center;
+    animation: animation_message_sent 1s forwards
+    
+    
+   
+    
+
+}
+#from_input::placeholder {text-align: center;
+    font-size: 1.5rem;
+
+}
+
+#from_input {
+    width: 100%;
+    height: 100%;
+   text-align: center;
+    outline: none;
+    border-top: 2px solid rgb(6, 150, 233);
+    font-size: 1.5rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    resize: none;
+    border-bottom: none;
+    
+    
+    
+    
+    
+    
+}
+
+
+
+#text_top_left_messenger {
+    vertical-align: middle;
+    align-self: center;
+    font-weight: 700;
+    margin-left: 10%;
+    color: white;
+    font-size: 1.5rem;
+    
+}
+#top_left_messenger_content {
+    display: flex;
+    
+
+    
+}
+#top_messenger_content {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(6, 150, 233);
+    padding: 20px;
+    
+
+
+}
+
+#middle_messenger_content {
+    background-color: white;
+    
+    
+}
+
+#messenger_pen_img {
+    position: absolute;
+    width: 40px;
+    right: 0;
+    
+    cursor: pointer;
+    z-index: 999;
+    animation: animation_pen_messenger 1s forwards;
+    transition: 1s;
+    top: -20px;
+    background-color: rgb(6, 150, 233);
+    padding: 40px;
+    border-radius: 80px;
+    display: none;
+    
+
+    
+   
+   
+}
+
+
+
 
 #white_hr {
     margin-right: 25%;
@@ -1090,6 +1316,22 @@ margin-top: 4vw;
 
     
     
+
+}
+
+#email_user::placeholder {
+    text-align: center;
+    outline: none;
+   
+
+}
+#email_user {
+    text-align: center;
+    outline: none;
+    border: 2px solid rgb(6, 150, 233);
+    height: 50px;
+    box-shadow: 0 0 1em rgb(6, 150, 233);
+
 
 }
 
@@ -2219,6 +2461,7 @@ left: 85%;
 }
 #text1 {
     transform: translate(70vw, 20vw);
+    
 }
 
 
@@ -2228,7 +2471,11 @@ left: 85%;
     
     
 }
-#text_middle {
+#text_middle3 {
+    color: rgb(228, 43, 228);
+    position: absolute;
+    
+    
     
     
 }
@@ -2416,7 +2663,10 @@ left: 85%;
 
 }
 
-
+@keyframes animation_pen_messenger {
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+}
 
 
 
@@ -2473,6 +2723,27 @@ left: 85%;
         
 }
 
+@keyframes appear_messenger{
+    0% {opacity:0; transform: translateY(10vw);}
+    100% {opacity:1; transform: translateY(0vw); }
+   
+
+        
+}
+
+
+@keyframes hide_messenger{
+    0% {opacity:1; transform: translateY(0vw); }
+    100% {opacity:0; transform: translateY(30vw);}
+    
+   
+
+        
+}
+
+
+
+
 @keyframes appear2{
     0% {opacity:1; transform: translateY(0vw);}
     100% {opacity:0; transform: translateY(1vw);}
@@ -2505,6 +2776,27 @@ left: 85%;
     
    
 }
+
+@keyframes current_learning {
+    
+    0% {
+        transform: skewX(80deg);
+    }
+    50% {
+        transform: skewX(-80deg);
+    }
+    100% {
+        transform: skewX(0deg);
+    }
+
+     
+    
+}
+
+
+
+
+
 
 @keyframes fade_out{
     0% {opacity:1; }
@@ -2583,6 +2875,22 @@ left: 85%;
     
     
 }
+
+
+@keyframes animation_message_sent{
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+
+}
+
+@keyframes hide_message_sent_messager{
+    0% {opacity:1; height: 420px; } 
+    100% {opacity:0; height: 0px;}
+    
+    
+
+}
+
 
 
 @keyframes appear_extra_nav_hidden2{
@@ -3869,7 +4177,7 @@ left: 85%;
 @media only screen and (max-width:880px) {
 
     #text_top_container {
-        transform: translate(-53%);
+        transform: translate(-153%);
         padding-top: 20vw;
         padding-bottom: 100px;
         
@@ -4035,6 +4343,68 @@ left: 85%;
 
 }
 
+@media only screen and (max-width:1280px) {
+
+    #contact_img
+   {
+
+    width: 110px;
+       
+   }
+   
+
+}
+
+
+
+@media only screen and (max-width:1280px) {
+
+    #messenger_pen_img
+   {
+
+    width: 30px;
+    padding: 40px;
+       
+   }
+   
+
+}
+
+
+@media only screen and (max-width:880px) {
+
+    #messenger_pen_img
+   {
+
+    width: 20px;
+    padding: 25px;
+    
+       
+   }
+   
+
+}
+
+
+
+
+
+@media only screen and (max-width:880px) {
+
+    #contact_img
+   {
+
+       width: 70px;
+       
+    
+
+
+   }
+   
+
+}
+
+
 
 
 
@@ -4045,6 +4415,95 @@ left: 85%;
 
     .headbig {
         font-size: 4rem;
+
+       
+
+    }
+    
+
+}
+
+
+@media only screen and (max-width:1200px) {
+
+    #window_messenger, #window_messenger_email, #window_messenger_message_sent {
+        width: 400px;
+        height: 500px;
+        
+        
+
+       
+
+    }
+    
+
+}
+
+@media only screen and (max-width:800px) {
+
+    #window_messenger, #window_messenger_email, #window_messenger_message_sent {
+        width: 300px;
+        height: 500px;
+        top: 250px;
+        
+        
+
+       
+
+    }
+    
+
+}
+
+@media only screen and (max-height:800px) {
+
+    #window_messenger, #window_messenger_email, #window_messenger_message_sent {
+        width: 300px;
+        height: 500px;
+        top: 150px;
+        
+        
+
+       
+
+    }
+    
+
+}
+
+
+@media only screen and (max-width:800px) {
+
+    #profile_description {
+        font-size: 1rem;
+
+       
+
+    }
+    
+
+}
+
+@media only screen and (max-width:800px) {
+
+    .profile_img {
+        width: 70px;
+       
+        
+
+       
+
+    }
+    
+
+}
+
+@media only screen and (max-width:800px) {
+
+    #send_image_messenger, #send_image_messenger_message_sent {
+        width: 20px;
+       
+        
 
        
 
