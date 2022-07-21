@@ -3056,3 +3056,197 @@ function hide_mobile_hamb_sub_main_content() {
 document.querySelector("#hamb_top_mobile_svg").addEventListener("click",show_mobile_hamb_sub_main_content)
 document.querySelector("#hamb_top_mobile_svg_switch").addEventListener("click",hide_mobile_hamb_sub_main_content)
 
+
+
+
+
+
+
+
+const show_messenger = () => {
+
+ 
+  $("#contact_messenger").css("display", "block")
+}
+
+
+
+function show_messenger_main () {
+  var messenger = document.getElementById("contact_messenger")
+  var rect1 = messenger.getBoundingClientRect();
+
+
+  if (
+  rect1.top >= 0 &&
+  rect1.left >= 0 &&
+  rect1.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+  rect1.right <= (window.innerWidth || document.documentElement.clientWidth)) 
+
+  
+
+ {show_messenger()
+  }
+  else {
+    $("#contact_messenger").css("display", "none")
+  
+  }
+
+}
+
+
+
+document.addEventListener("scroll", show_messenger_main)
+
+
+
+
+function hide_messenger_show_pen() {
+
+  document.getElementById("contact_img").style.animation="fade_out 0.3s forwards"
+  setTimeout(() => {
+    $("#contact_img").css("display", "none")
+    $("#messenger_pen_img").css("display", "block")
+    document.getElementById("contact_img").style.animation="appear_messenger 1s forwards;"
+    
+  }, 302);
+
+ 
+
+
+
+
+
+}
+
+document.getElementById("contact_img").addEventListener("mouseover", hide_messenger_show_pen)
+
+
+
+
+
+function show_message_window() {
+  $("#window_messenger").css("display", "block")
+  $("#messenger_pen_img").css("display", "none")
+}
+
+document.getElementById("messenger_pen_img").addEventListener("click", show_message_window)
+
+function hide_message_window() {
+  document.getElementById("window_messenger").style.animation="hide_messenger 0.8s forwards"
+  setTimeout(() => {
+    $("#window_messenger").css("display", "none")
+    document.getElementById("window_messenger").style.animation="appear_messenger 1s forwards"
+    $("#messenger_pen_img").css("display", "block")
+
+
+    
+  }, 800);
+
+}
+document.getElementById("messenger_hamb_img").addEventListener("click", hide_message_window)
+
+
+
+function current_learning_animation () {
+  
+  document.getElementById("text_middle3").style.animation="current_learning 0.4s forwards"
+  setTimeout(() => {
+    document.getElementById("text_middle3").style.animation=""
+  }, 500);
+    
+
+}
+
+function set(){
+  setInterval(() => {
+    current_learning_animation()
+    
+  }, 2000);
+
+
+}
+
+set()
+
+
+
+
+function hide_messenger_show_messenger_email () {
+  $("#window_messenger").css("animation", "none")
+  $("#window_messenger").fadeOut(300)
+  setTimeout(() => {
+    document.getElementById("window_messenger").style.display="none"
+    $("#window_messenger_email").fadeIn()
+    $("#window_messenger").css("animation", "appear_messenger 1s forwards")
+
+
+
+  }, 400);
+
+
+}
+
+document.getElementById("send_image_messenger").addEventListener("click",hide_messenger_show_messenger_email )
+
+function hide_messenger_email(){
+
+  $("#window_messenger_email").css("animation", "none")
+  $("#window_messenger_email").fadeOut(300)
+  setTimeout(() => {
+    $("#messenger_pen_img").fadeIn()
+    $("#window_messenger_email").css("animation", "appear_messenger 1s forwards")
+
+
+    
+  }, 301);
+    
+
+
+
+
+  
+
+
+}
+
+document.getElementById("messenger_hamb_img_email").addEventListener("click", hide_messenger_email)
+
+
+
+
+function hide_message_sent_show_thanks () {
+  $("#window_messenger_email").css("animation", "none")
+  $("#window_messenger_email").fadeOut(300)
+  setTimeout(() => {
+    $("#window_messenger_message_sent").css("display", "block")
+  },400)
+  setTimeout(() => {
+    $("#window_messenger_message_sent").css("animation", "hide_message_sent_messager 1.5s forwards" )
+    
+    
+  }, 3000);
+  setTimeout(() => {
+    $("#window_messenger_email").css("animation", "appear_messenger 1s forwards")
+    $("#window_messenger_email").css("display", "none")
+    $("#window_messenger_message_sent").css("display", "none")
+    $("#window_messenger_message_sent").css("animation", "appear_messenger 1s forwards" )
+    $("#messenger_pen_img").fadeIn()
+
+    
+  }, 4501);
+ 
+
+
+    
+ 
+
+}
+document.getElementById("send_image_messenger_message_sent").addEventListener("click", hide_message_sent_show_thanks)
+
+
+
+
+
+
+
+
